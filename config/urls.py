@@ -11,4 +11,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("common/", include("common.urls")),
     path("board/", include("board.urls")),
+    path("park/", include("park.urls")),
 ]

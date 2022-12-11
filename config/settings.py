@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'park.apps.ParkConfig',
     'common.apps.CommonConfig',
     'board.apps.BoardConfig',
     'aptcomplex.apps.AptcomplexConfig',
@@ -83,7 +84,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'XE',
         'USER': 'USER1',
         'PASSWORD':'1234',
-        'HOST' : 'DESKTOP-4G64VU8',
+        'HOST' : 'DESKTOP-NFD8NTG',
         'PORT' : '1521',
     }
 }
@@ -125,7 +126,8 @@ USE_TZ = True
 import os
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR,]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
